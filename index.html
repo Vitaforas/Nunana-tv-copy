@@ -27,7 +27,7 @@
 
 
 
-<figure id="video_player">
+<figure id="videoPlayer">
      <video width="320" height="240" autoplay loop>
      <source src="video1.mp4" type="video/mp4" />
      <source src="video1.webm" type="video/webm" />
@@ -39,19 +39,12 @@
      <source src="video3.webm" type="video/webm" />
          <source src="video3.ogg" type="video/ogg" />             Your browser does not support the video tag.
      </video>
-     <figcaption>
-     <ul>
-     <li><a href="video1.mp4">Play Video 1</a></li>
-     <li><a href="video2.mp4">Play Video 2</a></li>
-     <li><a href="video3.mp4">Play Video 3</a></li>
-     </ul>
-     </figcaption>
      </figure>
 
 
 <script type="text/javascript">
-var video_player=document.getElementsById("video_player"),
-links=video_player.getElementsByTagName('a');
+var videoPlayer=document.getElementsById("videoPlayer"),
+links=videoPlayer.getElementsByTagName('a');
 for(var i=0; i<links.length; i++){
 links[i].onclick=handler;
 }
@@ -65,6 +58,7 @@ video.removeAttribute('poster');
 source=document.querySelectAll("#video_player video source");
 source[0].src=filename + ".mp4";
 source[1].src=filename + ".webm";
+source[2].src=filename + ".ogg";
 video.load();
 video.play();
 }
