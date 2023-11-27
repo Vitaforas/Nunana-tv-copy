@@ -24,7 +24,19 @@
                                                         <div class="inner">
                                                                 <h1>vitaforasTV</h1>
 
+<script type="text/javascript">
+    var nextVideo = "video2.mp4";
+    var videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.onended = function(){ 
+    videoPlayer.src = nextVideo;
+    } 
+</script> 
+<video id="videoPlayer" 
+src="video1.mp4" autoplay autobuffer controls />
 
+
+
+-
 
 
 <figure id="videoPlayer">
@@ -66,15 +78,7 @@ video.play();
 
 
 
-<script type="text/javascript">
-    var nextVideo = "video2.mp4";
-    var videoPlayer = document.getElementById('videoPlayer');
-    videoPlayer.onended = function(){ 
-    videoPlayer.src = nextVideo;
-    } 
-</script> 
-<video id="videoPlayer" 
-src="video1.mp4" autoplay autobuffer controls />
+
 
                                                                 Visit <a href="https://vitaforas.de"> vitaforas.de</a> here<br />or           
 <a href="https://www.appcreator24.com/app2648348-r4ymif">Download</a> our App</p>
