@@ -24,7 +24,29 @@
                                                         <div class="inner">
                                                                 <h1>Dream-Stream.TV</h1>
 
-<figure id="video_player">
+
+
+<script type="text/javascript">
+    var nextVideo = "video2.mp4";
+    var videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.onended = function(){ 
+    videoPlayer.src = nextVideo;
+    } 
+</script> 
+<video id="videoPlayer" 
+src="video1.mp4" autoplay autobuffer controls />
+
+
+
+
+
+
+
+
+-
+
+
+<figure id="videoPlayer">
      <video width="320" height="240" autoplay loop>
      <source src="video1.mp4" type="video/mp4" />
      <source src="video1.webm" type="video/webm" />
@@ -42,8 +64,8 @@
 
 
 <script type="text/javascript">
-var video_player=document.getElementsById("video_player"),
-links=video_player.getElementsByTagName('a');
+var videoPlayer=document.getElementsById("videoPlayer"),
+links=videoPlayer.getElementsByTagName('a');
 for(var i=0; i<links.length; i++){
 links[i].onclick=handler;
 }
@@ -63,16 +85,6 @@ video.play();
 </script>
 
 
-
-<script type="text/javascript">
-    var nextVideo = "video2.mp4";
-    var videoPlayer = document.getElementById('videoPlayer');
-    videoPlayer.onended = function(){ 
-    videoPlayer.src = nextVideo;
-    } 
-</script> 
-<video id="videoPlayer" 
-src="video1.mp4" autoplay autobuffer controls />
 
 
 
