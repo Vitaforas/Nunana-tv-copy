@@ -107,6 +107,20 @@ Herzlich Willkommen
 </p>         
 
 
+
+<figure id="video_player">
+     <video width="320" height="240" autoplay loop>
+<script type="text/javascript">
+    var nextVideo = "video2.mp4";
+    var videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.onended = function(){ 
+    videoPlayer.src = nextVideo;
+    } 
+</figure>
+</script> 
+<video id="videoPlayer" 
+src="video1.mp4" autoplay autobuffer controls />
+
         <p>
 <img src="LOGO.png"> 
 </p>
