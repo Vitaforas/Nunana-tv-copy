@@ -24,7 +24,46 @@
                                                         <div class="inner">
                                                                 <h1>Dream-Stream.TV</h1>
 
-<video controls autoplay>
+<figure id="video_player">
+     <video width="320" height="240" autoplay loop>
+     <source src="video1.mp4" type="video/mp4" />
+     <source src="video1.webm" type="video/webm" />
+         <source src="video1.ogg" type="video/ogg" />
+             Your browser does not support the video tag.
+     </video>
+     <figcaption>
+     <ul>
+     <li><a href="video1.mp4">Play Video 1</a></li>
+     <li><a href="video2.mp4">Play Video 2</a></li>
+     <li><a href="video3.mp4">Play Video 3</a></li>
+     </ul>
+     </figcaption>
+     </figure>
+
+
+<script type="text/javascript">
+var video_player=document.getElementsById("video_player"),
+links=video_player.getElementsByTagName('a');
+for(var i=0; i<links.length; i++){
+links[i].onclick=handler;
+}
+
+function handler(e){
+e.preventDefault();
+videotarget=this.getAttribute("href");
+filename=videotarget.substr(0,videotarget.lastIndexOf('.'))||videotarget;
+video=document.querySelectorAll("#video_player video");
+video.removeAttribute('poster');
+source=document.querySelectAll("#video_player video source");
+source[0].src=filename + ".mp4";
+source[1].src=filename + ".webm";
+video.load();
+video.play();
+}
+</script>
+
+
+
 <script type="text/javascript">
     var nextVideo = "video2.mp4";
     var videoPlayer = document.getElementById('videoPlayer');
@@ -32,7 +71,8 @@
     videoPlayer.src = nextVideo;
     } 
 </script> 
-<video id="videoPlayer" src="video1.mp4" autoplay autobuffer controls />
+<video id="videoPlayer" 
+src="video1.mp4" autoplay autobuffer controls />
 
 
 
