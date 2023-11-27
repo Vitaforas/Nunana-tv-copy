@@ -31,31 +31,14 @@
     videoPlayer.src = nextVideo;
     } 
 </script> 
-<video id="videoPlayer" 
-src="video1.mp4" autoplay autobuffer controls />
+<video id="videoPlayer" src="video1.mp4" autoplay autobuffer controls />
 
 
 
--
 
-
-<figure id="videoPlayer">
-     <video width="320" height="240" autoplay loop>
-     <source src="video1.mp4" type="video/mp4" />
-     <source src="video1.webm" type="video/webm" />
-         <source src="video1.ogg" type="video/ogg" />
-<source src="video2.mp4" type="video/mp4" />
-     <source src="video2.webm" type="video/webm" />
-         <source src="video2.ogg" type="video/ogg" />
-<source src="video3.mp4" type="video/mp4" />
-     <source src="video3.webm" type="video/webm" />
-         <source src="video3.ogg" type="video/ogg" />             Your browser does not support the video tag.
-     </video>
-     </figure>
 
 
 <script type="text/javascript">
-var videoPlayer=document.getElementsById("videoPlayer"),
 links=videoPlayer.getElementsByTagName('a');
 for(var i=0; i<links.length; i++){
 links[i].onclick=handler;
