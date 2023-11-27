@@ -4,7 +4,7 @@
 -->
 <html>
         <head>
-                <title>sDream.TV</title>
+                <title>vitaforas</title>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
                 <link rel="stylesheet" href="assets/css/main.css" />
@@ -22,7 +22,7 @@
                                                 </div>
                                                 <div class="content">
                                                         <div class="inner">
-                                                                <h1>vitaforasTV</h1>
+                                                                <h1>Dream-Stream.TV</h1>
 
 <video controls autoplay>
 <script type="text/javascript">
@@ -38,27 +38,6 @@
 
 
 
-
-<script type="text/javascript">
-links=videoPlayer.getElementsByTagName('a');
-for(var i=0; i<links.length; i++){
-links[i].onclick=handler;
-}
-
-function handler(e){
-e.preventDefault();
-videotarget=this.getAttribute("href");
-filename=videotarget.substr(0,videotarget.lastIndexOf('.'))||videotarget;
-video=document.querySelectorAll("#video_player video");
-video.removeAttribute('poster');
-source=document.querySelectAll("#video_player video source");
-source[0].src=filename + ".mp4";
-source[1].src=filename + ".webm";
-source[2].src=filename + ".ogg";
-video.load();
-video.play();
-}
-</script>
 
 
 
