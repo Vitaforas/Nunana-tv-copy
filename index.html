@@ -28,23 +28,67 @@
 
 
 
-
 <figure id="video_player">
      <video width="320" height="240" autoplay loop>
-     <source src="video1.mp4" type="video/mp4" />
-     <source src="video1.webm" type="video/webm" />
-         <source src="video1.ogg" type="video/ogg" />
+     <source src="video3.mp4" type="video/mp4" />
+     <source src="video3.webm" type="video/webm" />
+         <source src="video3.ogg" type="video/ogg" />
              Your browser does not support the video tag.
      </video>
      <figcaption>
      <ul>
-     <li><a href="video1.mp4">Play Video 1</a></li>
-     <li><a href="video2.mp4">Play Video 2</a></li>
-     <li><a href="video3.mp4">Play Video 3</a></li>
+     <li><a href="video1.mp4">
+<img src="bildname3.jpg" alt="3" width="50" height="60"></a>
+     <a href="video2.mp4">
+<img src="bildname2.jpg" alt="2" width="50" height="60"></a>
+     <a href="video3.mp4">
+<img src="bildname1.jpg" alt="1" width="50" height="60"></a>
+     <a href="video4.mp4">
+<img src="bildname4.jpg" alt="4" width="50" height="60"></a>
+     <a href="Gunpowder_Milkshake_(2021)_English.mp4">
+<img src="bildname5.jpg" alt="5" width="50" height="60"></a>
+     <a href="Tides2021.mp4">
+<img src="bildname6.jpg" alt="6" width="50" height="60"></a></li>
      </ul>
+
+
+
+<ul>
+     <li><a href="killroom.mp4">
+<img src="bildname7.jpg" alt="7" width="50" height="60"></a>
+     <a href="maximumsecurity2.mp4">
+<img src="bildname8.jpg" alt="8" width="50" height="60"></a>
+     <a href="freddy.mp4">
+<img src="freddy.jpg" alt="9" width="50" height="60"></a>
+     <a href="kfz.mp4">
+<img src="kfz.jpg" alt="10" width="50" height="60"></a>
+     <a href="koch.mp4">
+<img src="koch.jpg" alt="11" width="50" height="60"></a>
+     <a href="spiele.mp4">
+<img src="spiele.jpg" alt="12" width="50" height="60"></a></li>
+     </ul>
+
+
+
+<ul>
+     <li><a href="insel.mp4">
+<img src="insel.jpg" alt="13" width="50" height="60"></a>
+     <a href="prinzessin.mp4">
+<img src="prinzessin.jpg" alt="14" width="50" height="60"></a>
+     <a href="zoo.mp4">
+<img src="zoo.jpg" alt="15" width="50" height="60"></a>
+     <a href="fluch.mp4">
+<img src="fluch.jpg" alt="16" width="50" height="60"></a>
+     <a href="vr1.mp4">
+<img src="vr1.jpg" alt="17" width="50" height="60"></a>
+     <a href="vr2.mp4">
+<img src="vr2.jpg" alt="18" width="50" height="60"></a></li>
+     </ul>
+
+
+
      </figcaption>
      </figure>
-
 
 <script type="text/javascript">
 var video_player=document.getElementsById("video_player"),
@@ -62,29 +106,11 @@ video.removeAttribute('poster');
 source=document.querySelectAll("#video_player video source");
 source[0].src=filename + ".mp4";
 source[1].src=filename + ".webm";
+source[2].src=filename + ".ogg";
 video.load();
 video.play();
 }
 </script>
-
-
-
-_____
-
-
-
-<script type="text/javascript">
-    var nextVideo = "video2.mp4";
-    var videoPlayer = document.getElementById('videoPlayer');
-    videoPlayer.onended = function(){ 
-    videoPlayer.src = nextVideo;
-        } 
-</script> 
-<video id="videoPlayer" 
-src="video1.mp4" autoplay autobuffer controls />
-
-<video controls autoplay>
-
 
 
 
