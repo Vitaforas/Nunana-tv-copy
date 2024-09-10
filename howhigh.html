@@ -54,63 +54,52 @@
 
 <p>         
 </p>  
- <p> </p>
 
-
-<p>
+ <p>
 </p>
 
-<p>        
-</p>   
 
-<p>          
-</p>  
+<head>
+    <style>
+        .slideshow {
+            width: 300px; /* Definiert die Breite des Bildes */
+            height: auto; /* Automatische Höhe basierend auf der Breite */
+        }
 
+        .slideshow-container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
 
-<p>
-</p><div id="slideshow1" class="slideshow-container">
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="https://123.vitaforas.de/p1.jpg" style="width:30%">
-    <div class="text">Caption Text</div>
-  </div>
+<body>
+    <div class="slideshow-container">
+        <a href="minions.html">
+            <img class="slideshow" src="ich1.jpg" onclick="redirectToMinionsPage()" />
+        </a>
+        <a href="minions.html">
+            <img class="slideshow" src="ich1.jpg" onclick="redirectToMinionsPage()" />
+        </a>
+    </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="https://123.vitaforas.de/p2.jpg" style="width:30%">
-    <div class="text">Caption Two</div>
-  </div>
+    <script>
+        var images = ['ich1.jpg', 'minions2.jpg', 'minions3.jpg', 'i4.jpg'];
+        var currentIndex = 0;
+        var imageElements = document.getElementsByClassName("slideshow");
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="https://123.vitaforas.de/p3.jpg" style="width:30%">
-    <div class="text">Caption Three</div>
-  </div>
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            Array.from(imageElements).forEach(function(element) {
+                element.src = images[currentIndex];
+            });
+        }
 
-  <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+        function redirectToMinionsPage() {
+            window.location.href = "minions.html";
+        }
 
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1, 'slideshow1')"></span> 
-    <span class="dot" onclick="currentSlide(2, 'slideshow1')"></span> 
-    <span class="dot" onclick="currentSlide(3, 'slideshow1')"></span> 
-  </div>
-</div>
-<script>
-var slideIndex1 = 1;
-showSlides(1, 'slideshow1');
-
-function plusSlides(n, slideshowId) {
-  showSlides(slideIndex1 += n, slideshowId);
-}
-
-function currentSlide(n, slideshowId) {
-  showSlides(slideIndex1 = n, slideshowId);
-}
-
-setInterval(function() {
-  plusSlides(1, 'slideshow1');
-}, 2000); // Change image every 2 seconds
-</script>
+        setInterval(changeImage, 3000); // Ändert das Bild alle 3 Sekunden
+    </script>
 </body>
 </html>
