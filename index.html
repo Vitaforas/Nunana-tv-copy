@@ -126,38 +126,6 @@ JUST👇🏼NEW!
 
       
 
-<head>
-    <style>
-        #slideshow {
-            width: 300px; /* Definiert die Breite des Bildes */
-            height: auto; /* Automatische Höhe basierend auf der Breite */
-        }
-    </style>
-</head>
-
-<body>
-    <a href="minions.html">
-        <img id="slideshow" src="ich1.jpg" onclick="redirectToMinionsPage()" />
-    </a>
-</body>
-
-<script>
-    var images = ['ich1.jpg', 'minions2.jpg',
- 'minions3.jpg', 'i4.jpg'];
-    var currentIndex = 0;
-    var imageElement = document.getElementById("slideshow");
-
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        imageElement.src = images[currentIndex];
-    }
-
-    function redirectToMinionsPage() {
-        window.location.href = "minions.html";
-    }
-
-    setInterval(changeImage, 3000); // Ändert das Bild alle 3 Sekunden
-</script>
 
  <p>
 </p> 
