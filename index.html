@@ -94,6 +94,32 @@ JUST👇🏼NEW!
 
  <p>
 
+<head>
+    <style>
+        #slideshow {
+            width: 300px; /* Definiert die Breite des Bildes */
+            height: auto; /* Automatische Höhe basierend auf der Breite */
+        }
+    </style>
+</head>
+
+<body>
+    <img id="slideshow" src="https://123.vitaföras.de/p1.jpg" onclick="changeImage()" />
+</body>
+
+<script>
+    var images = ['https://123.vitaföras.de/p1.jpg', 'https://123.vitaföras.de/p2.jpg', 'https://123.vitaföras.de/p3.jpg'];
+    var currentIndex = 0;
+    var imageElement = document.getElementById("slideshow");
+
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        imageElement.src = images[currentIndex];
+    }
+
+    setInterval(changeImage, 3000); // Ändert das Bild alle 3 Sekunden
+</script>
+
 
 </p> 
 __________
