@@ -206,40 +206,6 @@ https://5927421.igen.app">
 <p>         
 </p> 
 
-<div>
-<head>
-    <style>
-        #slideshow {
-            width: 300px; /* Definiert die Breite des Bildes */
-            height: auto; /* Automatische Höhe basierend auf der Breite */
-        }
-    </style>
-</head>
-
-<body>
-    <a href="minions.html">
-        <img id="slideshow" src="ich1.jpg" onclick="redirectToMinionsPage()" />
-    </a>
-</body>
-
-<script>
-    var images = ['ich1.jpg', 'minions2.jpg',
- 'minions3.jpg', 'i4.jpg'];
-    var currentIndex = 0;
-    var imageElement = document.getElementById("slideshow");
-
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        imageElement.src = images[currentIndex];
-    }
-
-    function redirectToMinionsPage() {
-        window.location.href = "minions.html";
-    }
-
-    setInterval(changeImage, 3000); // Ändert das Bild alle 3 Sekunden
-</script>
-</div>
 
     <p>         </p>          <a href="&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#49;&#50;&#51;&#46;&#118;&#105;&#116;&#97;&#102;&#111;&#114;&#97;&#115;&#46;&#100;&#101;/panda4&#46;&#109;&#112;&#52;">
 <img src="p4.jpg" alt="panda" width="100%" height="auto"></a>   
