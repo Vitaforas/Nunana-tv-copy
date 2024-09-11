@@ -125,6 +125,35 @@ https://5927421.igen.app">
 <img src="apple.jpg" alt="apple" width="35%" height="auto" name="apple"></a>
 <p>         </p>
 
+
+<img class="slideshow" alt="Minions Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/minions.html';">
+
+<img class="slideshow" alt="Deadpool Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/deadpool.html';">
+
+    <script>
+    var imagesMinions = ['i4.jpg', 'i1.png', 'minions2.jpg', 'minions3.jpg'];
+    var currentIndexMinions = 0;
+    var imageElementsMinions = document.getElementsByClassName("slideshow")[0];
+
+    var imagesDeadpool = ['https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p2.jpg', 'https://123.vitaforas.de/d3.jpg'];
+    var currentIndexDeadpool = 0;
+    var imageElementsDeadpool = document.getElementsByClassName("slideshow")[1];
+
+    function changeImageMinions() {
+    currentIndexMinions = (currentIndexMinions + 1) % imagesMinions.length;
+    imageElementsMinions.src = imagesMinions[currentIndexMinions];
+}
+
+function changeImageDeadpool() {
+    currentIndexDeadpool = (currentIndexDeadpool + 1) % imagesDeadpool.length;
+    imageElementsDeadpool.src = imagesDeadpool[currentIndexDeadpool];
+}
+
+    setInterval(changeImageMinions, 2000); // Ändert das Minions-Bild alle 2 Sekunden
+    setInterval(changeImageDeadpool, 2000); // Ändert das Deadpool-Bild alle 2 Sekunden
+</script>
+
+
 <p>         
 </p>   
  <a href="http://123.vitaforas.de/furiosa.mp4">
@@ -142,39 +171,6 @@ https://5927421.igen.app">
 
  <p> </p>
 
-<div>    
-<head>
-    <style>
-        #slideshow {
-            width: 300px; /* Definiert die Breite des Bildes */
-            height: auto; /* Automatische Höhe basierend auf der Breite */
-        }
-    </style>
-</head>
-
-<body>
-    <a href="deadpool.html">
-        <img id="slideshow" src="https://123.vitaforas.de/p1.jpg" onclick="redirectToMinionsPage()" />
-    </a>
-</body>
-
-<script>
-    var images = ['https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p2.jpg', 'https://123.vitaforas.de/d3.jpg'];
-    var currentIndex = 0;
-    var imageElement = document.getElementById("slideshow");
-
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        imageElement.src = images[currentIndex];
-    }
-
-    function redirectToMinionsPage() {
-        window.location.href = "deadpool.html";
-    }
-
-    setInterval(changeImage, 3000); // Ändert das Bild alle 3 Sekunden
-</script>
-</div>
 
 <p>         
 </p>   
