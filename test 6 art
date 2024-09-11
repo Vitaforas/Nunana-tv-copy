@@ -57,6 +57,10 @@
 <img class="slideshow" alt="Spiderman Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/mazerunner.html';">
 <img class="slideshow" alt="Batman Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/batman.html';">
 
+
+<img class="slideshow" alt="Spider Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/maze.html';">
+<img class="slideshow" alt="Bat Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/bat.html';">
+
 <script>
 var imagesMinions = ['i4.jpg', 'ik1.jpg', 'minions2.jpg', 'minions3.jpg'];
 var currentIndexMinions = 0;
@@ -73,6 +77,15 @@ var imageElementsSpiderman = document.getElementsByClassName("slideshow")[2];
 var imagesBatman = ['i4.jpg', 'ik1.jpg', 'minions2.jpg', 'minions3.jpg'];
 var currentIndexBatman = 0;
 var imageElementsBatman = document.getElementsByClassName("slideshow")[3];
+
+
+var imagesSpider = ['https://123.vitaforas.de/mazerunner.jpg', 'https://123.vitaforas.de/mazerunner.jpg', 'https://123.vitaforas.de/maze2.jpg', 'maze3.jpg'];
+var currentIndexSpider = 0;
+var imageElementsSpider = document.getElementsByClassName("slideshow")[2];
+
+var imagesBat = ['i4.jpg', 'ik1.jpg', 'minions2.jpg', 'minions3.jpg'];
+var currentIndexBat = 0;
+var imageElementsBat = document.getElementsByClassName("slideshow")[3];
 
 function changeImageMinions() {
     currentIndexMinions = (currentIndexMinions + 1) % imagesMinions.length;
@@ -94,10 +107,23 @@ function changeImageBatman() {
     imageElementsBatman.src = imagesBatman[currentIndexBatman];
 }
 
+
+function changeImageSpider() {
+    currentIndexSpider = (currentIndexSpiderman + 1) % imagesSpider.length;
+    imageElementsSpider.src = imagesSpider[currentIndexSpider];
+}
+
+function changeImageBat() {
+    currentIndexBat = (currentIndexBat + 1) % imagesBat.length;
+    imageElementsBat.src = imagesBat[currentIndexBat];
+}
+
 setInterval(changeImageMinions, 2000); // Ändert das Minions-Bild alle 2 Sekunden
 setInterval(changeImageDeadpool, 2000); // Ändert das Deadpool-Bild alle 2 Sekunden
 setInterval(changeImageSpiderman, 2000); // Ändert das Spiderman-Bild alle 2 Sekunden
 setInterval(changeImageBatman, 2000); // Ändert das Batman-Bild alle 2 Sekunden
+setInterval(changeImageSpider, 2000); // Ändert das Spider-Bild alle 2 Sekunden
+setInterval(changeImageBat, 2000); // Ändert das Bat-Bild alle 2 Sekunden
 </script>
 </body>
 </html>
