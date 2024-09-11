@@ -55,14 +55,14 @@
     var imageElementsDeadpool = document.getElementsByClassName("slideshow")[1];
 
     function changeImageMinions() {
-        currentIndexMinions = (currentIndexMinions + 1) % imagesMinions.length;
-        imageElementsMinions.src = imagesMinions[currentIndexMinions];
-    }
+    currentIndexMinions = (currentIndexMinions + 1) % imagesMinions.length;
+    imageElementsMinions.src = 'https://nunana.site/minions.html' + imagesMinions[currentIndexMinions];
+}
 
-    function changeImageDeadpool() {
-        currentIndexDeadpool = (currentIndexDeadpool + 1) % imagesDeadpool.length;
-        imageElementsDeadpool.src = imagesDeadpool[currentIndexDeadpool];
-    }
+function changeImageDeadpool() {
+    currentIndexDeadpool = (currentIndexDeadpool + 1) % imagesDeadpool.length;
+    imageElementsDeadpool.src = 'https://nunana.site/deadpool.html' + imagesDeadpool[currentIndexDeadpool];
+}
 
     setInterval(changeImageMinions, 3000); // Ändert das Minions-Bild alle 3 Sekunden
     setInterval(changeImageDeadpool, 3000); // Ändert das Deadpool-Bild alle 3 Sekunden
