@@ -125,21 +125,30 @@ https://5927421.igen.app">
 <img src="apple.jpg" alt="apple" width="35%" height="auto" name="apple"></a>
 <p>         </p>
 
-
 <img class="slideshow" alt="Minions Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/minions.html';">
-
 <img class="slideshow" alt="Deadpool Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/deadpool.html';">
 
-    <script>
-    var imagesMinions = ['i4.jpg', 'i1.png', 'minions2.jpg', 'minions3.jpg'];
-    var currentIndexMinions = 0;
-    var imageElementsMinions = document.getElementsByClassName("slideshow")[0];
+<img class="slideshow" alt="Spiderman Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/mazerunner.html';">
+<img class="slideshow" alt="Batman Slideshow" style="width: 40%;" onclick="window.location.href = 'https://nunana.site/batman.html';">
 
-    var imagesDeadpool = ['https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p2.jpg', 'https://123.vitaforas.de/d3.jpg'];
-    var currentIndexDeadpool = 0;
-    var imageElementsDeadpool = document.getElementsByClassName("slideshow")[1];
+<script>
+var imagesMinions = ['i4.jpg', 'ik1.jpg', 'minions2.jpg', 'minions3.jpg'];
+var currentIndexMinions = 0;
+var imageElementsMinions = document.getElementsByClassName("slideshow")[0];
 
-    function changeImageMinions() {
+var imagesDeadpool = ['https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p1.jpg', 'https://123.vitaforas.de/p2.jpg', 'https://123.vitaforas.de/d3.jpg'];
+var currentIndexDeadpool = 0;
+var imageElementsDeadpool = document.getElementsByClassName("slideshow")[1];
+
+var imagesSpiderman = ['https://123.vitaforas.de/mazerunner.jpg', 'https://123.vitaforas.de/mazerunner.jpg', 'https://123.vitaforas.de/maze2.jpg', 'maze3.jpg'];
+var currentIndexSpiderman = 0;
+var imageElementsSpiderman = document.getElementsByClassName("slideshow")[2];
+
+var imagesBatman = ['i4.jpg', 'ik1.jpg', 'minions2.jpg', 'minions3.jpg'];
+var currentIndexBatman = 0;
+var imageElementsBatman = document.getElementsByClassName("slideshow")[3];
+
+function changeImageMinions() {
     currentIndexMinions = (currentIndexMinions + 1) % imagesMinions.length;
     imageElementsMinions.src = imagesMinions[currentIndexMinions];
 }
@@ -149,10 +158,21 @@ function changeImageDeadpool() {
     imageElementsDeadpool.src = imagesDeadpool[currentIndexDeadpool];
 }
 
-    setInterval(changeImageMinions, 2000); // Ändert das Minions-Bild alle 2 Sekunden
-    setInterval(changeImageDeadpool, 2000); // Ändert das Deadpool-Bild alle 2 Sekunden
-</script>
+function changeImageSpiderman() {
+    currentIndexSpiderman = (currentIndexSpiderman + 1) % imagesSpiderman.length;
+    imageElementsSpiderman.src = imagesSpiderman[currentIndexSpiderman];
+}
 
+function changeImageBatman() {
+    currentIndexBatman = (currentIndexBatman + 1) % imagesBatman.length;
+    imageElementsBatman.src = imagesBatman[currentIndexBatman];
+}
+
+setInterval(changeImageMinions, 2000); // Ändert das Minions-Bild alle 2 Sekunden
+setInterval(changeImageDeadpool, 2000); // Ändert das Deadpool-Bild alle 2 Sekunden
+setInterval(changeImageSpiderman, 2000); // Ändert das Spiderman-Bild alle 2 Sekunden
+setInterval(changeImageBatman, 2000); // Ändert das Batman-Bild alle 2 Sekunden
+</script>
 
 <p>         
 </p>   
